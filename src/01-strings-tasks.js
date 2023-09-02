@@ -216,12 +216,10 @@ function getRectangleString(width, height) {
   const newline = '\n';
 
   let rectangle = cornerTopLeft + horizontalLine.repeat(width - 2) + cornerTopRight + newline;
-
   const middleLines = verticalLine + ' '.repeat(width - 2) + verticalLine + newline;
   rectangle += middleLines.repeat(height - 2);
-
   rectangle += cornerBottomLeft + horizontalLine.repeat(width - 2) + cornerBottomRight;
-
+  rectangle += newline;
   return rectangle;
 }
 
